@@ -12,7 +12,7 @@ typedef struct node
 	int timeOut;
 	int priceHour;
 	int priceTotal;
-	struct node * next;;
+	struct node * next;
 }carInfo;
 
 /*

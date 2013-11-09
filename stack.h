@@ -1,44 +1,25 @@
-#define STACK_TYPE
+#define STACK_TYPE int
 
 /*
 	push
 */
-void push(STACK_TYPE value,struct *stack)
-{
-	assert(!isFull(stack));
-	stack->topElement += 1;
-	stack->park[topElement] = value;
-}
+void push(STACK_TYPE value,struct *stack);
 
 /*
 	pop
 */
-void pop(struct *stack)
-{
-	assert(!isEmpty(stack));
-	stack->topElement -= 1;
-}
+void pop(struct *stack);
 /*
 	top
 */
-STACK_TYPE top(struct *stack)
-{
-	assert(!isEmpty(stack));
-	return stack->park[topElement];
-}
+STACK_TYPE top(struct *stack);
 
 /*
 	isFull
 */
-int isFull(struct *stack)
-{
-	return stack->topElement == lengthMax;
-}
+int isFull(struct *stack);
 
 /*
 	isEmpty
 */
-int isEmpty(struct *stack)
-{
-	return stack->topElement == -1;
-}
+int isEmpty(struct *stack);

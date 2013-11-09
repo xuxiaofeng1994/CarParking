@@ -1,0 +1,61 @@
+In file included from test.c:1:0:
+stack.h:6:35: error: expected ‘{’ before ‘*’ token
+stack.h:15:23: error: expected ‘{’ before ‘*’ token
+stack.h:25:20: error: expected ‘{’ before ‘*’ token
+In file included from /usr/include/stdio.h:75:0,
+                 from test.c:2:
+/usr/include/libio.h:332:3: error: unknown type name ‘size_t’
+/usr/include/libio.h:336:67: error: ‘size_t’ undeclared here (not in a function)
+/usr/include/libio.h:364:62: error: expected declaration specifiers or ‘...’ before ‘size_t’
+/usr/include/libio.h:373:6: error: expected declaration specifiers or ‘...’ before ‘size_t’
+/usr/include/libio.h:495:19: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘_IO_sgetn’
+In file included from test.c:2:0:
+/usr/include/stdio.h:316:35: error: expected declaration specifiers or ‘...’ before ‘size_t’
+/usr/include/stdio.h:322:47: error: expected declaration specifiers or ‘...’ before ‘size_t’
+/usr/include/stdio.h:334:20: error: expected declaration specifiers or ‘...’ before ‘size_t’
+/usr/include/stdio.h:341:10: error: expected declaration specifiers or ‘...’ before ‘size_t’
+/usr/include/stdio.h:383:44: error: expected declaration specifiers or ‘...’ before ‘size_t’
+/usr/include/stdio.h:387:45: error: expected declaration specifiers or ‘...’ before ‘size_t’
+/usr/include/stdio.h:659:11: error: expected declaration specifiers or ‘...’ before ‘size_t’
+/usr/include/stdio.h:662:9: error: expected declaration specifiers or ‘...’ before ‘size_t’
+/usr/include/stdio.h:672:8: error: expected declaration specifiers or ‘...’ before ‘size_t’
+/usr/include/stdio.h:702:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘fread’
+/usr/include/stdio.h:708:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘fwrite’
+/usr/include/stdio.h:730:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘fread_unlocked’
+/usr/include/stdio.h:732:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘fwrite_unlocked’
+test.c:26:2: error: expected specifier-qualifier-list before ‘static’
+test.c:37:2: error: expected specifier-qualifier-list before ‘static’
+test.c:43:24: error: expected ‘{’ before ‘*’ token
+test.c: In function ‘printStack’:
+test.c:46:6: error: ‘i’ undeclared (first use in this function)
+test.c:46:6: note: each undeclared identifier is reported only once for each function it appears in
+test.c:46:22: error: request for member ‘lengthMax’ in something not a structure or union
+test.c:48:36: error: request for member ‘park’ in something not a structure or union
+test.c: At top level:
+test.c:56:35: error: expected ‘{’ before ‘*’ token
+test.c: In function ‘push’:
+test.c:59:7: error: request for member ‘topElement’ in something not a structure or union
+test.c:60:7: error: request for member ‘park’ in something not a structure or union
+test.c:60:19: error: request for member ‘topElement’ in something not a structure or union
+test.c: At top level:
+test.c:66:17: error: expected ‘{’ before ‘*’ token
+test.c: In function ‘pop’:
+test.c:69:7: error: request for member ‘topElement’ in something not a structure or union
+test.c: At top level:
+test.c:74:23: error: expected ‘{’ before ‘*’ token
+test.c: In function ‘top’:
+test.c:77:14: error: request for member ‘park’ in something not a structure or union
+test.c:77:26: error: request for member ‘topElement’ in something not a structure or union
+test.c: At top level:
+test.c:83:19: error: expected ‘{’ before ‘*’ token
+test.c: In function ‘isFull’:
+test.c:85:14: error: request for member ‘topElement’ in something not a structure or union
+test.c: At top level:
+test.c:91:20: error: expected ‘{’ before ‘*’ token
+test.c: In function ‘isEmpty’:
+test.c:93:14: error: request for member ‘topElement’ in something not a structure or union
+test.c: In function ‘main’:
+test.c:98:2: warning: passing argument 2 of ‘push’ from incompatible pointer type [enabled by default]
+test.c:56:6: note: expected ‘int *’ but argument is of type ‘struct <anonymous> *’
+test.c:99:2: warning: passing argument 1 of ‘printStack’ from incompatible pointer type [enabled by default]
+test.c:43:6: note: expected ‘int *’ but argument is of type ‘struct <anonymous> *’
