@@ -1,25 +1,24 @@
 #define STACK_TYPE int
-
 /*
 	push
 */
-void push(STACK_TYPE value,struct *stack);
+void push(STACK_TYPE value);
 
 /*
 	pop
 */
-void pop(struct *stack);
+void pop(void);
 /*
 	top
 */
-STACK_TYPE top(struct *stack);
+STACK_TYPE top(void);
 
 /*
 	isFull
 */
-int isFull(struct *stack);
+int isFull(void);
 
 /*
 	isEmpty
 */
-int isEmpty(struct *stack);
+int isEmpty(void);

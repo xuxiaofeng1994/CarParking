@@ -1,42 +1,43 @@
+
 /*
 	push
 */
-void push(STACK_TYPE value,struct *stack)
+void push(STACK_TYPE value)
 {
-	assert(!isFull(stack));
-	stack->topElement += 1;
-	stack->park[stack->topElement] = value;
+	assert(!isFull());
+	topElement += 1;
+	park[topElement] = value;
 }
 
 /*
 	pop
 */
-void pop(struct *stack)
+void pop(void)
 {
-	assert(!isEmpty(stack));
-	stack->topElement -= 1;
+	assert(!isEmpty());
+	topElement -= 1;
 }
 /*
 	top
 */
-STACK_TYPE top(struct *stack)
+STACK_TYPE top(void)
 {
-	assert(!isEmpty(stack));
-	return stack->park[stack->topElement];
+	assert(!isEmpty());
+	return park[topElement];
 }
 
 /*
 	isFull
 */
-int isFull(struct *stack)
+int isFull(void)
 {
-	return stack->topElement == lengthMax;
+	return topElement == CAR_MAX;
 }
 
 /*
 	isEmpty
 */
-int isEmpty(struct *stack)
+int isEmpty(void)
 {
-	return stack->topElement == -1;
+	return topElement == -1;
 }
