@@ -17,5 +17,19 @@ void printStack(void)
 int main()
 {
 	push(110);
+	printf("the test for top :%d\n",top());
+	push(112);
+	push(119);
+	push(222);
+	pop();
 	printStack();
+	pop();
+	printStack();
+	pop();
+	printStack();
+	pop();
+	printStack();
+	pop();
+	printStack();
+
 }

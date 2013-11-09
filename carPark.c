@@ -1,4 +1,4 @@
-#define CAR_MAX 10
+#define CAR_MAX 3
 /*
 	定义车辆信息的结构体
 */

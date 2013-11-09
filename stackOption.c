@@ -31,7 +31,7 @@ STACK_TYPE top(void)
 */
 int isFull(void)
 {
-	return topElement == CAR_MAX;
+	return topElement == CAR_MAX - 1;
 }
 
 /*
