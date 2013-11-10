@@ -1,4 +1,4 @@
-#define CAR_MAX 3
+#define CAR_MAX 5
 /*
 	定义车辆信息的结构体
 */
@@ -7,6 +7,7 @@ typedef struct node
 	int idNum;
 	int carNum;
 	int timeEnter;
+	int ifPark;
 	struct node * next;
 }carInfo;
 carInfo *current,*previous;

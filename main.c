@@ -22,7 +22,8 @@ void printLink(void)
 	current = head;
 	while(current != NULL)
 	{
-		printf("the carInfo is %d\n",current->idNum);
+		if(current->ifPark == 1)
+			printf("the carInfo is %d,%d\n",current->idNum,current->carNum);
 		current = current->next;
 	}
 }
@@ -46,10 +47,20 @@ int main()
 	pop();
 	printStack();
 #endif
-	add(1,2,1200);
-	add(2,3,1300);
-	add(3,4,1400);
-	del(2);
+//	add(getIdNum(),2,1200);
+//	add(2,3,1300);
+//	add(getIdNum(),4,1400);
+//	add(4,5,1500);
+//	add(5,6,1700);
+//	add(6,7,1800);
+//	add(7,7,1800);
+//	add(2,5,1300);
+//	del(3);
+//	add(3,8,1900);
 	printLink();
+	printf("the nextIdNum is %d\n",getIdNum());
+	printf("the nextIdNum is %d\n",getIdNum());
+	printf("the nextIdNum is %d\n",getIdNum());
+	printf("the nextIdNum is %d\n",getIdNum());
 
 }
