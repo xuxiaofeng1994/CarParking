@@ -1,6 +1,7 @@
 int add(int idNum,int carNum,int timeEnter)
 {
-	assert(!isFullLink(idNum));
+	if(idNum < 1 || idNum > CAR_MAX)
+		return 0;
 	current = (carInfo *)malloc(sizeof(carInfo));
 	if(current == NULL)
 		return 0;
@@ -10,13 +11,6 @@ int add(int idNum,int carNum,int timeEnter)
 		previous->next = current;
 	current->next = NULL;
 	
-	if(testIdNum(idNum) == 0)
-	{
-		free(current);
-		printf("Sorry,your idNum has been exit!!\n");
-		return 0;
-	}
-
 	current->idNum = idNum;
 	current->carNum = carNum;
 	current->timeEnter = timeEnter;
@@ -37,7 +31,7 @@ void del(int x)
 	printf("del the idNum is %d\n",x);
 }
 
-
+#if 0
 int testIdNum(int x)
 {
 	carInfo *temp;
@@ -53,6 +47,7 @@ int testIdNum(int x)
 	}
 	return 1;
 }
+#endif
 
 int getIdNum(void)
 {
@@ -69,11 +64,17 @@ int getIdNum(void)
 			num++;
 		temp = temp->next;
 	}
-	return num+1;
+	num += 1;
+	if(isFullLink(num))
+	{
+		printf("The car parking is full!!\n");
+		return 0;
+	}
+	return num;
 }
 
 int isFullLink(int x)
 {
-	return x == CAR_MAX + 1;
+	return x >= CAR_MAX + 1;
 }
 
