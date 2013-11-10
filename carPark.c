@@ -7,11 +7,10 @@ typedef struct node
 	int idNum;
 	int carNum;
 	int timeEnter;
-	int timeOut;
-	int priceHour;
-	int priceTotal;
 	struct node * next;
 }carInfo;
+carInfo *current,*previous;
+carInfo *head = NULL;
 
 /*
 	定义便道的数组
