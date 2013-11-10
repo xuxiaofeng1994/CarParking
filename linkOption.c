@@ -1,10 +1,16 @@
 int add(int idNum,int carNum,int timeEnter)
 {
-	if(idNum < 1 || idNum > CAR_MAX)
+	if(idNum == 0)
+	{
+		printf("Can't not add car\n");
 		return 0;
+	}
 	current = (carInfo *)malloc(sizeof(carInfo));
 	if(current == NULL)
+	{
+		printf("Can't create a new link\n");	
 		return 0;
+	}
 	if(head == NULL)
 		head = current;
 	else
@@ -30,25 +36,6 @@ void del(int x)
 	current->ifPark = 0;
 	printf("del the idNum is %d\n",x);
 }
-
-#if 0
-int testIdNum(int x)
-{
-	carInfo *temp;
-	temp = head;
-	while(temp !=NULL)
-	{
-		if(temp->ifPark == 1)
-		{
-			if(temp->idNum == x)
-				return 0;
-		}
-		temp = temp->next;
-	}
-	return 1;
-}
-#endif
-
 int getIdNum(void)
 {
 	carInfo *temp;
@@ -69,6 +56,13 @@ int getIdNum(void)
 	{
 		printf("The car parking is full!!\n");
 		return 0;
+	}else
+	{
+		if(num < 1)
+		{
+			printf("there are some error in the getIdNum()\n");
+			return 0;
+		}
 	}
 	return num;
 }
