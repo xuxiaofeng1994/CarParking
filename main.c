@@ -7,6 +7,7 @@
 #include"stackOption.c"
 #include"linkOption.c"
 #define STACK_DEBUG 1
+#define perHour 5
 
 void printStack(void)
 {
@@ -28,30 +29,58 @@ void printLink(void)
 	}
 }
 
-int main()
+int isEnter(void)
 {
-#if STACK_DEBUG
-	push(110);
-	printf("the test for top :%d\n",top());
-	push(112);
-	push(119);
-	push(222);
-	pop();
-	printStack();
-#endif
-	add(getIdNum(),2,1200);
-	add(getIdNum(),3,1300);
-	add(getIdNum(),4,1400);
-	add(getIdNum(),5,1500);
-	add(getIdNum(),5,1500);
-	add(getIdNum(),5,1500);
-//	add(5,6,1700);
-//	add(6,7,1800);
-//	add(7,7,1800);
-//	add(2,5,1300);
-//	del(3);
-//	add(3,8,1900);
-	printLink();
-	printf("The next IdNum is %d\n",getIdNum());
 
 }
+int isLeave()
+{
+	
+}
+int time(void)
+{
+
+}
+
+int main()
+{
+	int idNum,carNum,timeEnter,timeOut;
+	printf("######################################\n");
+	printf("########Welcome To This CarParking####\n");
+	while(1)
+	{
+		if(isEnter())
+		{
+				idNum = getIdNum();
+				if(idNum == 0)
+				{
+					if(isFull() == 1)
+					{
+						printf("对不起，车库和便道都已满\n");
+						return 0;
+					}else
+					{
+						printf("对不起车库已满，您可以在便车道等候\n");
+					}
+		
+				}else
+				{
+					printf("在进入车库之前，请输入您的车牌号：\n");
+					scanf("%d%d",&carNum);
+					timeEnter = time();
+					printf("您现在可以进入车库，您的车位号为%d\n",idNum);
+					add(idNum,carNum,timeEnter);
+				}
+		}
+		if(isLeave())
+		{
+			del(isLeave());
+			timeOut = time();
+			printf("您的费用是%d元\n",(timeEnter - timeOut)*perHour);
+			if(isEmpty() == 0)
+				printf("%d号车位现已空闲，请便车道上的车进入车库\n");	
+		}
+	}
+}
+
+
